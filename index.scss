@@ -26,12 +26,12 @@ body {
 main {
     @include flex(column);
     height: calc(100vh - 16px);
-    aside {
+    .attribution {
         font-size: 13px; 
         text-align: center; 
         margin-top: 20px;
     }
-    aside a {
+    .attribution a {
         color: $btnbg;
     }
 }
@@ -41,6 +41,7 @@ main {
     background-color: $cardcolor;
     border-radius: 10px;
     box-shadow: 0px 15px 10px 0 $boxshadow, 0 15px 30px $boxshadow;
+    padding-bottom: 5px;
     .image {
         img {
             border-radius: 10px 10px 0 0;
@@ -80,9 +81,11 @@ main {
                         color: $btnhover;
                 }
             }
-            h4 {
+            p {
                 margin: 0;
                 margin-left: 55px;
+                font-weight: bold;
+                color: $cancle;
                 span {
                     color: grey;
                     font-weight: normal;
@@ -90,7 +93,7 @@ main {
                 }
             }
         }
-        button {
+        .button {
             width: 100%;
             padding: 14px 16px;
             border-radius: 10px;
@@ -99,13 +102,14 @@ main {
             font-weight: bold;
             font-size: 14px;
             transition: 0.5s;
+            color: $cardcolor;
             cursor: pointer;
             box-shadow: 0px 10px 20px 0 $boxshadow;
             &:hover {
                 background-color: $btnhover;
             }
         }
-        button a {
+        .button a {
             color: $cardcolor;
             text-decoration: none;
         }
@@ -116,6 +120,7 @@ main {
             transition: 0.3s;
             color: $cancle;
             text-decoration: none;
+            font-weight: bold;
             font-size: 15px;
             &:hover {
                 opacity: 1;
