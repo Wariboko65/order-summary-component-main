@@ -9,7 +9,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 ### Links
 
 - Solution URL: [solution page](https://your-solution-url.com)
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Live Site URL: [live site](https://order-summary-component-main-six-mu.vercel.app/)
 
 ### Built with
 
@@ -22,6 +22,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ## Author
 
-- Website - [John Godwin Oamien](https://www.your-site.com)
+- Website - [John Godwin Oamien](https://order-summary-component-main-six-mu.vercel.app/)
 - Frontend Mentor - [@Wariboko65](https://www.frontendmentor.io/profile/Wariboko65)
 - Twitter - [@Gdwin656](https://www.twitter.com/Gdwin656)
