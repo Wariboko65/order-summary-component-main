@@ -1,0 +1,133 @@
+$mainbg: hsl(225, 100%, 94%);
+$musicbg: hsl(227, 78%, 96%);
+$cardcolor: hsl(225, 100%, 98%);
+$btnbg: hsl(245, 75%, 52%);
+$btnhover: hsl(273, 75%, 52%);
+$boxshadow: hsl(225, 28%, 67%);
+$grey: grey;
+$cancle: black;
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    font-family: "Red Hat Display", arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(images/pattern-background-mobile.svg) no-repeat fixed;
+    background-size: contain;
+    background-color: $mainbg;
+}
+main {
+    @include flex(column);
+    height: calc(100vh - 16px);
+    aside {
+        font-size: 13px; 
+        text-align: center; 
+        margin-top: 20px;
+    }
+    aside a {
+        color: $btnbg;
+    }
+}
+.container {
+    width: 330px;
+    height: auto;
+    background-color: $cardcolor;
+    border-radius: 10px;
+    box-shadow: 0px 15px 10px 0 $boxshadow, 0 15px 30px $boxshadow;
+    .image {
+        img {
+            border-radius: 10px 10px 0 0;
+            height: 180px;
+            width: 100%;
+        }
+    }
+    .text {
+        margin: 0 20px;
+        text-align: center;
+        p {
+            color: $grey;
+            font-size: 15px;
+        }
+        .planb {
+            margin: 10px 10px;
+            .plan {
+                background-color: $musicbg;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                padding: 20px;
+                text-align: left; 
+                img {
+                    float: left;
+                    height: 35px;
+                    width: 35px;
+                }
+                a {
+                    float: right;
+                    transition: 0.5s;
+                    margin-top: -10px;
+                    font-weight: normal;
+                    color: $btnbg;
+                    font-size: 15px;
+                    &:hover {
+                        text-decoration: none;
+                        color: $btnhover;
+                }
+            }
+            h4 {
+                margin: 0;
+                margin-left: 55px;
+                span {
+                    color: grey;
+                    font-weight: normal;
+                    font-size: 15px;
+                }
+            }
+        }
+        button {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: none;
+            background-color: $btnbg;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.5s;
+            cursor: pointer;
+            box-shadow: 0px 10px 20px 0 $boxshadow;
+            &:hover {
+                background-color: $btnhover;
+            }
+        }
+        button a {
+            color: $cardcolor;
+            text-decoration: none;
+        }
+    }
+    .new { 
+        a {
+            opacity: 0.6;
+            transition: 0.3s;
+            color: $cancle;
+            text-decoration: none;
+            font-size: 15px;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+    body {
+        background: url(images/pattern-background-desktop.svg) no-repeat fixed;
+        background-size: contain;
+        background-color: $mainbg;
+      }
+}

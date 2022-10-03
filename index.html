@@ -7,127 +7,32 @@
   <link rel="stylesheet" href="https://fonts.google.com/specimen/Red+Hat+Display">
   <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Order summary card</title>
-  <style>
-    .attribution { font-size: 13px; text-align: center; margin-top: 20px;}
-    .attribution a { color: hsl(228, 45%, 44%); }
-    body {
-      background: url(images/pattern-background-mobile.svg) no-repeat fixed;
-      background-size: contain;
-      background-color: hsl(225, 100%, 94%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: calc(100vh - 16px);
-
-    }
-
-    .container {
-      width: 330px;
-      height: auto;
-      background-color: hsl(225, 100%, 98%);
-      border-radius: 10px;
-      box-shadow: 0px 15px 10px 0 hsl(225, 28%, 67%), 0 15px 30px hsl(225, 41%, 77%);
-    }
-    .image > img {
-      border-radius: 10px 10px 0 0 ;
-    }
-    .text {
-      margin: 0 20px;
-      text-align: center;
-    }
-    .plan {
-      background-color: hsl(227, 78%, 96%);
-      border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 20px;
-      text-align: left;
-    }
-    .planb {
-      margin: 10px 10px;
-    }
-    button {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 10px;
-      border: none;
-      background-color: hsl(245, 75%, 52%);
-      color: hsl(225, 100%, 98%);
-      font-weight: bold;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.5s;
-      box-shadow: 0px 10px 20px 0 hsl(225, 28%, 67%);
-    }
-    button:hover {
-      background-color: hsl(273, 75%, 52%);
-    }
-    .plan img {
-      float: left;
-    }
-    .plan a{
-      float: right;
-      cursor: pointer;
-      transition: 0.5s;
-    }
-    .plan a:hover {
-      text-decoration: none;
-      color: hsl(273, 75%, 52%);
-    }
-    .plan h4 {
-      margin: 0;
-      margin-left: 55px;
-    }
-    h4 a {
-      margin-top: -10px;
-      font-weight: normal;
-    }
-    span {
-      color: grey;
-      font-weight: normal;
-    }
-    .new {
-      opacity: 0.6;
-      transition: 0.3s;
-    }
-    .new:hover {
-      opacity: 1;
-      cursor: pointer;
-    }
-    @media screen and (min-width: 992px) {
-      body {
-        background: url(images/pattern-background-desktop.svg) no-repeat fixed;
-        background-size: contain;
-        background-color: hsl(225, 100%, 94%);
-      }
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="image">
-      <img src="images/illustration-hero.svg" alt="hero" height="180px" width="100%">
-    </div>
-    <div class="text">
+  <main>
+    <article class="container">
+      <section class="image">
+      <img src="images/illustration-hero.svg" alt="hero">
+      </section>
+    <section class="text">
       <h2>Order Summary</h2>
-      <p style="color: grey;">You can now listen to millions of songs, audiobooks, and podcasts on any 
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
         device anywhere you like!</p>
     <div class="planb">
     <div class="plan">
-      <img src="images/icon-music.svg" alt="music" height="35" width="35">
-      <h4>Annual Plan <br> <span>$59.99/year</span><a href="#">Change</a></h4>
-      
+      <img src="images/icon-music.svg" alt="music">
+      <h4>Annual Plan <br> <span>$59.99/year</span><a href="#" target="_blank">Change</a></h4>
     </div>
-    <button type="button">Proceed to Payment</button>
+    <button type="button"><a href="#" target="_blank">Proceed to Payment</a></button>
     </div>
-    <h4 class="new">Cancel Order</h4>
-    
-  </div>
-</div>
+    <h4 class="new"><a href="#" target="_blank">Cancel Order</a></h4>
+    </section>
+    </article>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">John Godwin Oamien</a>.
-  </div>
+<aside class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">John Godwin Oamien</a>.
+</aside>
+</main>
 </body>
 </html>

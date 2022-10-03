@@ -1,1 +1,120 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  font-family: "Red Hat Display", arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/pattern-background-mobile.svg) no-repeat fixed;
+  background-size: contain;
+  background-color: hsl(225deg, 100%, 94%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 16px);
+}
+main aside {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+}
+main aside a {
+  color: hsl(245deg, 75%, 52%);
+}
+
+.container {
+  width: 330px;
+  height: auto;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 10px;
+  box-shadow: 0px 15px 10px 0 hsl(225deg, 28%, 67%), 0 15px 30px hsl(225deg, 28%, 67%);
+}
+.container .image img {
+  border-radius: 10px 10px 0 0;
+  height: 180px;
+  width: 100%;
+}
+.container .text {
+  margin: 0 20px;
+  text-align: center;
+}
+.container .text p {
+  color: grey;
+  font-size: 15px;
+}
+.container .text .planb {
+  margin: 10px 10px;
+}
+.container .text .planb .plan {
+  background-color: hsl(227deg, 78%, 96%);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+}
+.container .text .planb .plan img {
+  float: left;
+  height: 35px;
+  width: 35px;
+}
+.container .text .planb .plan a {
+  float: right;
+  transition: 0.5s;
+  margin-top: -10px;
+  font-weight: normal;
+  color: hsl(245deg, 75%, 52%);
+  font-size: 15px;
+}
+.container .text .planb .plan a:hover {
+  text-decoration: none;
+  color: hsl(273deg, 75%, 52%);
+}
+.container .text .planb .plan h4 {
+  margin: 0;
+  margin-left: 55px;
+}
+.container .text .planb .plan h4 span {
+  color: grey;
+  font-weight: normal;
+  font-size: 15px;
+}
+.container .text .planb button {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(245deg, 75%, 52%);
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 0 hsl(225deg, 28%, 67%);
+}
+.container .text .planb button:hover {
+  background-color: hsl(273deg, 75%, 52%);
+}
+.container .text .planb button a {
+  color: hsl(225deg, 100%, 98%);
+  text-decoration: none;
+}
+.container .text .new a {
+  opacity: 0.6;
+  transition: 0.3s;
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+.container .text .new a:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background: url(images/pattern-background-desktop.svg) no-repeat fixed;
+    background-size: contain;
+    background-color: hsl(225deg, 100%, 94%);
+  }
+}/*# sourceMappingURL=index.css.map */
