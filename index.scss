@@ -7,11 +7,15 @@ $boxshadow: hsl(225, 28%, 67%);
 $grey: grey;
 $cancle: black;
 
-@mixin flex($direction) {
+@mixin flex(
+        $direction, 
+        $justifyContent, 
+        $alignItems
+    ) {
     display: flex;
     flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
 }
 
 * {
@@ -20,13 +24,19 @@ $cancle: black;
 }
 
 body {
-    background: url(images/pattern-background-mobile.svg) no-repeat fixed;
+    background: url('images/pattern-background-mobile.svg') no-repeat fixed;
     background-size: contain;
+    // user-select: none;
     background-color: $mainbg;
 }
 main {
-    @include flex(column);
-    height: calc(100vh - 16px);
+    @include flex(
+        column,
+        center,
+        center
+    );
+
+    min-height: calc(100vh - 16px);
     .attribution {
         font-size: 13px; 
         text-align: center; 
@@ -37,7 +47,7 @@ main {
     }
 }
 .container {
-    width: 330px;
+    max-width: 330px;
     height: auto;
     background-color: $cardcolor;
     border-radius: 10px;
@@ -55,6 +65,7 @@ main {
         text-align: center;
         p {
             color: $grey;
+            display: inline-block;
             font-size: 15px;
         }
         .planb {
@@ -63,34 +74,36 @@ main {
                 background-color: $musicbg;
                 border-radius: 10px;
                 margin-bottom: 20px;
-                padding: 20px;
-                text-align: left; 
+                padding: 20px; 
                 img {
                     float: left;
                     height: 35px;
                     width: 35px;
                 }
-                a {
-                    float: right;
-                    transition: 0.5s;
-                    margin-top: -10px;
-                    font-weight: normal;
-                    color: $btnbg;
-                    font-size: 15px;
-                    &:hover {
-                        text-decoration: none;
-                        color: $btnhover;
-                    }
-                }
+                
                 p {
                     margin: 0;
-                    margin-left: 55px;
                     font-weight: bold;
                     color: $cancle;
+                    text-align: left;
                     span {
                         color: grey;
                         font-weight: normal;
                         font-size: 15px;
+                        margin-right: 20px;
+                    }
+                    a {
+                        float: right;
+                        transition: 0.5s;
+                        margin-top: -10px;
+                        font-weight: normal;
+                        color: $btnbg;
+                        font-size: 15px;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: $btnhover;
+                        }
                     }
                 }
             }
@@ -133,8 +146,8 @@ main {
 
 @media screen and (min-width: 992px) {
     body {
-        background: url(images/pattern-background-desktop.svg) no-repeat fixed;
+        background: url('images/pattern-background-desktop.svg') no-repeat fixed;
         background-size: contain;
         background-color: $mainbg;
-      }
+    }
 }
