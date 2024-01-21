@@ -13,6 +13,7 @@ $cancle: black;
     justify-content: center;
     align-items: center;
 }
+
 * {
     font-family: "Red Hat Display", arial, sans-serif;
     box-sizing: border-box;
@@ -79,56 +80,57 @@ main {
                     &:hover {
                         text-decoration: none;
                         color: $btnhover;
+                    }
+                }
+                p {
+                    margin: 0;
+                    margin-left: 55px;
+                    font-weight: bold;
+                    color: $cancle;
+                    span {
+                        color: grey;
+                        font-weight: normal;
+                        font-size: 15px;
+                    }
                 }
             }
-            p {
-                margin: 0;
-                margin-left: 55px;
+            .button {
+                width: 100%;
+                padding: 14px 16px;
+                border-radius: 10px;
+                border: none;
+                background-color: $btnbg;
                 font-weight: bold;
+                font-size: 14px;
+                transition: 0.5s;
+                color: $cardcolor;
+                cursor: pointer;
+                box-shadow: 0px 10px 20px 0 $boxshadow;
+                &:hover {
+                    background-color: $btnhover;
+                }
+            }
+            .button a {
+                color: $cardcolor;
+                text-decoration: none;
+            }
+        }
+        .new { 
+            a {
+                opacity: 0.6;
+                transition: 0.3s;
                 color: $cancle;
-                span {
-                    color: grey;
-                    font-weight: normal;
-                    font-size: 15px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 15px;
+                &:hover {
+                    opacity: 1;
                 }
             }
         }
-        .button {
-            width: 100%;
-            padding: 14px 16px;
-            border-radius: 10px;
-            border: none;
-            background-color: $btnbg;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.5s;
-            color: $cardcolor;
-            cursor: pointer;
-            box-shadow: 0px 10px 20px 0 $boxshadow;
-            &:hover {
-                background-color: $btnhover;
-            }
-        }
-        .button a {
-            color: $cardcolor;
-            text-decoration: none;
-        }
     }
-    .new { 
-        a {
-            opacity: 0.6;
-            transition: 0.3s;
-            color: $cancle;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-  }
 }
+
 @media screen and (min-width: 992px) {
     body {
         background: url(images/pattern-background-desktop.svg) no-repeat fixed;
